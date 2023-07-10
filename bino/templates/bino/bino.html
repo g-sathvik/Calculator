@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+	<style>
+    li{
+      margin: 10px;
+    }
+  </style>
+<script>
+	
+</script>
+	<title>sfsfd</title>
+	<style>
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+</style>
+<style>
+  nav {
+  background-color: black;
+  overflow: hidden;
+}
+
+nav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+nav a.active {
+  background-color: white;
+  color: black;
+}
+button {
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	border: none;
+	padding: 8px 24px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	border-radius: 8px;
+	margin:8px;
+  font-weight: bold;
+	}
+
+	button:hover {
+	background-color: white;
+	color: black;
+	}
+</style>
+</head>
+<header>
+  <nav>
+    <a href="../">Home</a>
+    <a class="active"href="../bino">Binomial</a>
+    <a href="../black">Black Scholes</a>
+  </nav>
+</header>
+<body>
+<h1>Binomial</h1>
+<form action = "binocalc">
+  <table>
+    <tr>
+      <td><label for="S">Stock Price:</label>
+      </td>
+      <td><input type="number" step = "any" id="S" name="S" value = {{first}} min = "0"></td>
+    </tr>
+    <tr>
+      <td>  <label for="K">Strike Price:</label>
+      </td>
+      <td>  <input type="number" step = "any" id="K" name="K" value = {{second}} min = "0">
+      </td>
+    </tr>
+    <tr>
+      <td>  <label for="T">Time:</label>
+      </td>
+      <td>  <input type="number" step = "any" id="T" name="T" value = {{third}} min = "0">
+      </td>
+    </tr>
+    <tr>
+      <td>  <label for="r">Risk-free Rate:</label>
+      </td>
+      <td>  <input type="number" step = "any" id="r" name="r" value = {{four}} min = "0">
+      </td>
+    </tr>
+    <tr>
+      <td>  <label for="n">Number of Steps:</label>
+      </td>
+      <td>      <input type="number" step = "1" id="n" name="n" value = {{five}} min = "1">
+      </td>
+    </tr>    
+    <tr>
+      <td>  <label for="sigma">Sigma:</label>
+      </td>
+      <td>  <input type="number" step = "any" id="sigma" name="sigma" value = {{sev}} min = "0">
+      </td>
+    </tr>
+  </table> 
+<div>
+  <div  style="display: inline;">
+    <input type="radio" id="Call" name="CP" value="Call"
+    checked>
+    <label for="Call">Call</label>
+    <input style="margin-left:20px;" type="radio" id="Put" name="CP" value="Put">
+    <label for="Put">Put</label>
+</div>
+<div>
+  <button>Submit</button>
+  <br>
+  Option Price:{{sixth}}
+  </div>
+</form> 
+<Footer>
+	<div style="text-align: center; background-color: black;color:white;height: 100px;margin-top: 25.57%;">
+		<h3 style="position:relative;color:white;top:35%;font-weight: bold;">Gampa Sathwik</h3>
+	</div>
+</Footer>
+</body>
+</html>	
